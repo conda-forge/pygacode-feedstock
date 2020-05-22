@@ -1,17 +1,14 @@
 {% set name = "pygacode" %}
 {% set version = "0.52" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "1e84c8c845ec033b60f3e1554918edec8d426d11005269da73322da20c669886" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  fn: '{{ name }}-{{ version }}.tar.gz'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  'sha256': '1e84c8c845ec033b60f3e1554918edec8d426d11005269da73322da20c669886'
   patches:
     - 0001-changing.patch  # [linux]
 
