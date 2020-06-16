@@ -1,20 +1,20 @@
 {% set name = "pygacode" %}
-{% set version = "0.52" %}
+{% set version = "0.55" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  'sha256': '1e84c8c845ec033b60f3e1554918edec8d426d11005269da73322da20c669886'
+  sha256: 7a2607c961556e1462aae4a3f756e538254833baa9f6f33b0a9a422afe1d9607
   patches:
     - 0001-changing.patch  # [linux]
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py27 or win or not x86_64]
 
 requirements:
@@ -35,12 +35,12 @@ requirements:
     - llvm-openmp  # [osx]
 
 about:
-  home: "https://gacode.io/"
+  home: https://gacode.io/
   license: MIT
   license_family: MIT
   license_file: PKG-INFO
-  summary: "Python interface to gacode profile and geometry tools."
-  doc_url: 'https://gacode.io/'
+  summary: Python interface to gacode profile and geometry tools.
+  doc_url: https://gacode.io/
 
 extra:
   recipe-maintainers:
