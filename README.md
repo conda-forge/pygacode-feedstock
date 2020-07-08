@@ -5,7 +5,7 @@ Home: https://gacode.io/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python interface to gacode profile and geometry tools.
 
