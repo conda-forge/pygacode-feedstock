@@ -13,7 +13,7 @@ source:
     - 0001-changing.patch  # [linux]
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py27 or win or not x86_64]
 
