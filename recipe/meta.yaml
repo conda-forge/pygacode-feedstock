@@ -1,5 +1,5 @@
 {% set name = "pygacode" %}
-{% set version = "0.70" %}
+{% set version = "0.71" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28167a1aef3ab3d49cb7118e9f6d290fd5e56d33c5dfc819bb30c686d0531188
+  sha256: ea5bac0caae0cf1d7bfdaa775d4f73912cb5f5f56157467e5fe72b4c75b1ee92
   patches:
     - 0001-changing.patch  # [linux]
 
