@@ -15,7 +15,7 @@ source:
 build:
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<=36 or win or not x86_64]
+  skip: true  # [py<=36 or win or linux32]
 
 requirements:
   build:
