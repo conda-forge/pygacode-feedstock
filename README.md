@@ -1,11 +1,11 @@
-About pygacode
-==============
+About pygacode-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygacode-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gacode.io/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygacode-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python interface to gacode profile and geometry tools.
 
