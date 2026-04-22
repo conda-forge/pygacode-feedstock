@@ -13,13 +13,14 @@ source:
     - 0001-changing.patch  # [linux]
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<=36 or win or linux32 or python_impl == 'pypy']
 
 requirements:
   build:
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
     - libgomp      # [linux]
     - llvm-openmp  # [osx]
   host:
@@ -31,7 +32,6 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - libgomp      # [linux]
     - llvm-openmp  # [osx]
     - scikit-image >=0.13
